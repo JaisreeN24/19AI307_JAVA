@@ -1,59 +1,70 @@
-# Ex.No:5(D) IS-A RELATIONSHIP AND HAS-A RELATIONSHIP
+# Ex.No:5(E) HAS-A RELATIONSHIP
 ## AIM:
-   To Create a java program to find factorial of number using class and object concepts and apply the has-a relationship.
- 
+To implement a  Java Program to Find the Largest or Max Number in Array using has - a relationship.
 ## ALGORITHM :
-1. Start the program.
 
-2. Create a class Animal with a method eat() that prints "I can eat".
+1. Start the program and import Scanner for user input.
 
-3. Create a class Person that inherits from Animal, and add a method name() that prints "My name is Rohu".
+2. Create a TriangleArea class with:
 
-4. Create a Main class that inherits from Person:
+   Private variables width and height.
+   
+   Methods setWidth(double) and setHeight(double) to assign values.
+   
+   Method getArea() that returns the area by multiplying width and height.
 
-   In the main method:
-      
-      Create an object of Main.
-      
-      Call name() to print the name.
-      
-      Call eat() to print the eating ability.
+3. In the main method:
 
-5. End the program.
+   Create a Scanner object and a TriangleArea object.
+   
+   Read two double inputs from the user (for width and height).
+
+4. Set the width and height in the TriangleArea object and calculate the area.
+
+5. Print the area (after converting it to an integer) and close the scanner.
+
 
 ## PROGRAM:
  ```
 /*
-Program to implement a IS-A RELATIONSHIP AND HAS-A RELATIONSHIP using Java
+Program to implement a HAS-A RelationShip
 Developed by: JAISREE N
-RegisterNumber: 212224060104 
+RegisterNumber:  212224060104
 */
 ```
 
 ## Sourcecode.java:
-
 ```
-class Animal {
-    public void eat() {
-        System.out.println("I can eat");
-    }
-}
+import java.util.Scanner;
+public class TriangleArea {
 
-class Person extends Animal {
-    public void name() {
-        System.out.println("My name is Rohu");
-    }
-}
+    private double width;
+    private double height;
 
-public class Main extends Person {
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getArea() {
+        return width * height;
+    }
+
     public static void main(String[] args) {
-        Main obj = new Main();
-        obj.name();
-        obj.eat();
+        Scanner sc = new Scanner(System.in);
+        TriangleArea triangle = new TriangleArea();
+        double w = sc.nextDouble(); 
+        double h = sc.nextDouble(); 
+        triangle.setWidth(w);
+        triangle.setHeight(h);
+        System.out.println((int)triangle.getArea());
     }
 }
-```
 
+```
 
 
 
@@ -61,9 +72,10 @@ public class Main extends Person {
 
 
 ## OUTPUT:
+<img width="339" height="372" alt="image" src="https://github.com/user-attachments/assets/a4b69d1d-cc1a-48d6-8b1e-2609759ed39d" />
 
-<img width="434" height="196" alt="image" src="https://github.com/user-attachments/assets/365eac66-58ec-4b6f-ade0-d5e2a606ac91" />
 
 
 ## RESULT:
-Thus the java program to find factorial of number using class and object concepts and apply the has-a relationship was executed successfully.
+Thus the java program to Find the Largest or Max Number in Array using has - a relationship was executed successfully. 
+
