@@ -1,19 +1,18 @@
-# Ex.No:3(B) STRING BUFFER IN JAVA
+# Ex.No:3(C)    STRING BUILDER IN JAVA
 
 ## AIM:
-To develop a java program use append() method concatenates the given argument with this String and use stringbuffer class.
+To Create a java program use replace() method replaces the given String from the specified beginIndex and endIndex and use stringbuilder
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Import `Scanner` and define class `concat`
+1.  Start the Program
+2.	Import `Scanner` and define class `replace`
 3.	In `main`:
 -	a) Create `Scanner` object `sc`
--	b) Read two strings `a` and `b` from user input
-4.	Create a `StringBuffer` object `sb` initialized with string `a`
-5.	Append a space and string `b` to `sb`
-6.	Print the concatenated result from `sb`
+-	b) Read a string `str` from user input
+4.	Create a `StringBuilder` object `sb` initialized with `str`
+5.	Use the `replace()` method to replace characters from index 1 to 3 with "Java"
+6.	Print the modified string using `sb.toString()`
 7.	End
-
 
 
 
@@ -23,7 +22,7 @@ To develop a java program use append() method concatenates the given argument wi
 ## PROGRAM:
  ```
 /*
-Program to implement a String Buffer using Java
+Program to implement a String Builder using Java
 Developed by: JAISREE N
 RegisterNumber:  212224060104
 */
@@ -32,17 +31,17 @@ RegisterNumber:  212224060104
 ## Sourcecode.java:
 
 ```
-import java.util.*;
-public class StringBufferExample{  
-public static void main(String args[]){  
+import java.util.Scanner;
+public class StringBufferExample3{  
+public static void main(String args[]){ 
 Scanner sc=new Scanner(System.in);
 String str1=sc.nextLine();
-String str2=sc.nextLine();
-StringBuffer sb=new StringBuffer(str1+" ");  
-sb.append(str2);  
-System.out.println(sb);  
+StringBuffer sb=new StringBuffer(str1);  
+sb.replace(1,3,"Java");  
+System.out.println(sb); 
 }  
-}  
+}
+
 
 ```
 
@@ -53,17 +52,14 @@ System.out.println(sb);
 
 
 ## OUTPUT:
-```
-Input         Expected       Got
 
-Hello         Hello Java     Hello Java
-Java 
+<img width="420" height="328" alt="image" src="https://github.com/user-attachments/assets/adaba5f0-98c8-4398-8c6b-b7469ce8d0a1" />
 
-Hi            Hi Welcome     Hi Welcome
-Welcome
-```
 
 
 
 ## RESULT:
-Thus the java program use append() method concatenates the given argument with this String and use stringbuffer class was executed successfully.
+Thus the java program use replace() method replaces the given String from the specified beginIndex and endIndex and use stringbuilder was executed successfully.
+
+
+
